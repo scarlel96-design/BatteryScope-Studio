@@ -1,0 +1,4 @@
+COMMAND: uv run --locked python tools/verify_architecture.py
+INPUT: C:\Users\scarl\Documents\Codex\2026-10-01\batteryscope-studio-sol-work-order-01
+architecture boundary PASS
+EXIT STATUS: 0

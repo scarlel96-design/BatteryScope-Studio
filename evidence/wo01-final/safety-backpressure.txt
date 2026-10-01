@@ -1,0 +1,5 @@
+COMMAND: uv run --locked pytest -q tests/unit/test_supplement.py tests/integration/test_backpressure.py tests/fault/test_faults.py
+INPUT: C:\Users\scarl\Documents\Codex\2026-10-01\batteryscope-studio-sol-work-order-01
+......................                                                   [100%]
+22 passed in 1.62s
+EXIT STATUS: 0

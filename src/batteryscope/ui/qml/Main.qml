@@ -54,11 +54,13 @@ ApplicationWindow {
             Layout.fillWidth: true
             spacing: 12
             Button {
+                objectName: "startSimulationButton"
                 text: "Start Simulation"
                 onClicked: backend.startSimulation()
             }
             Item { Layout.fillWidth: true }
             Button {
+                objectName: "emergencyStopButton"
                 text: "Emergency Stop"
                 onClicked: backend.emergencyStop()
             }

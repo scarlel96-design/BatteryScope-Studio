@@ -7,13 +7,13 @@ import json
 import os
 import re
 from pathlib import Path
+from time import perf_counter
 
 import pyarrow as pa
 import pyarrow.parquet as pq
 
 from batteryscope.core.models import MeasurementSample
 from batteryscope.storage.session import SessionStore
-
 
 SAMPLE_SCHEMA = pa.schema([
     ("timestamp_monotonic_ns", pa.int64()),
@@ -56,8 +56,11 @@ class ChunkWriter:
         self.session_id = session_id
         self.session_path = session_path
         self.indices: dict[str, int] = {}
+        self.bytes_written = 0
+        self.write_seconds = 0.0
 
     def write(self, device_id: str, samples: list[MeasurementSample]) -> Path:
+        started = perf_counter()
         if not samples:
             raise ValueError("empty chunk")
         if any(sample.source_device_id != device_id for sample in samples):
@@ -90,4 +93,6 @@ class ChunkWriter:
                              max(s.timestamp_monotonic_ns for s in samples), file_size,
                              samples[0].sequence, samples[-1].sequence)
         self.indices[device_id] = index
+        self.bytes_written += file_size
+        self.write_seconds += perf_counter() - started
         return final_path

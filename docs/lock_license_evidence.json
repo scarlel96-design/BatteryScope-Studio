@@ -1,0 +1,302 @@
+{
+  "annotated-types": {
+    "license_concluded": "MIT",
+    "license_declared": "MIT",
+    "metadata_url": "https://pypi.org/pypi/annotated-types/0.8.0/json",
+    "version": "0.8.0"
+  },
+  "attrs": {
+    "license_concluded": "MIT",
+    "license_declared": "MIT",
+    "metadata_url": "https://pypi.org/pypi/attrs/26.1.0/json",
+    "version": "26.1.0"
+  },
+  "batteryscope-studio": {
+    "license_concluded": "NOASSERTION",
+    "license_declared": "NOASSERTION",
+    "metadata_url": "LOCAL",
+    "version": "0.1.0"
+  },
+  "bleak": {
+    "license_concluded": "MIT",
+    "license_declared": "MIT",
+    "metadata_url": "https://pypi.org/pypi/bleak/1.1.1/json",
+    "version": "1.1.1"
+  },
+  "colorama": {
+    "license_concluded": "BSD-3-Clause",
+    "license_declared": "BSD-3-Clause",
+    "metadata_url": "https://pypi.org/pypi/colorama/0.4.6/json",
+    "version": "0.4.6"
+  },
+  "dbus-fast": {
+    "license_concluded": "MIT",
+    "license_declared": "MIT",
+    "metadata_url": "https://pypi.org/pypi/dbus-fast/5.0.25/json",
+    "version": "5.0.25"
+  },
+  "duckdb": {
+    "license_concluded": "MIT",
+    "license_declared": "MIT",
+    "metadata_url": "https://pypi.org/pypi/duckdb/1.5.6/json",
+    "version": "1.5.6"
+  },
+  "hidapi": {
+    "license_concluded": "BSD-3-Clause",
+    "license_declared": "BSD-3-Clause OR GPL-3.0-only",
+    "metadata_url": "https://pypi.org/pypi/hidapi/0.15.0/json",
+    "version": "0.15.0"
+  },
+  "hypothesis": {
+    "license_concluded": "MPL-2.0",
+    "license_declared": "MPL-2.0",
+    "metadata_url": "https://pypi.org/pypi/hypothesis/6.168.3/json",
+    "version": "6.168.3"
+  },
+  "iniconfig": {
+    "license_concluded": "MIT",
+    "license_declared": "MIT",
+    "metadata_url": "https://pypi.org/pypi/iniconfig/2.3.0/json",
+    "version": "2.3.0"
+  },
+  "jsonschema": {
+    "license_concluded": "MIT",
+    "license_declared": "MIT",
+    "metadata_url": "https://pypi.org/pypi/jsonschema/4.26.0/json",
+    "version": "4.26.0"
+  },
+  "jsonschema-specifications": {
+    "license_concluded": "MIT",
+    "license_declared": "MIT",
+    "metadata_url": "https://pypi.org/pypi/jsonschema-specifications/2025.9.1/json",
+    "version": "2025.9.1"
+  },
+  "librt": {
+    "license_concluded": "MIT",
+    "license_declared": "MIT",
+    "metadata_url": "https://pypi.org/pypi/librt/0.16.0/json",
+    "version": "0.16.0"
+  },
+  "mypy": {
+    "license_concluded": "MIT",
+    "license_declared": "MIT",
+    "metadata_url": "https://pypi.org/pypi/mypy/1.20.2/json",
+    "version": "1.20.2"
+  },
+  "mypy-extensions": {
+    "license_concluded": "MIT",
+    "license_declared": "MIT",
+    "metadata_url": "https://pypi.org/pypi/mypy-extensions/1.1.0/json",
+    "version": "1.1.0"
+  },
+  "packaging": {
+    "license_concluded": "Apache-2.0 OR BSD-2-Clause",
+    "license_declared": "Apache-2.0 OR BSD-2-Clause",
+    "metadata_url": "https://pypi.org/pypi/packaging/26.3/json",
+    "version": "26.3"
+  },
+  "pathspec": {
+    "license_concluded": "MPL-2.0",
+    "license_declared": "MPL-2.0",
+    "metadata_url": "https://pypi.org/pypi/pathspec/1.1.1/json",
+    "version": "1.1.1"
+  },
+  "pluggy": {
+    "license_concluded": "MIT",
+    "license_declared": "MIT",
+    "metadata_url": "https://pypi.org/pypi/pluggy/1.6.0/json",
+    "version": "1.6.0"
+  },
+  "pyarrow": {
+    "license_concluded": "Apache-2.0",
+    "license_declared": "Apache-2.0",
+    "metadata_url": "https://pypi.org/pypi/pyarrow/24.0.0/json",
+    "version": "24.0.0"
+  },
+  "pydantic": {
+    "license_concluded": "MIT",
+    "license_declared": "MIT",
+    "metadata_url": "https://pypi.org/pypi/pydantic/2.13.5/json",
+    "version": "2.13.5"
+  },
+  "pydantic-core": {
+    "license_concluded": "MIT",
+    "license_declared": "MIT",
+    "metadata_url": "https://pypi.org/pypi/pydantic-core/2.46.5/json",
+    "version": "2.46.5"
+  },
+  "pygments": {
+    "license_concluded": "BSD-2-Clause",
+    "license_declared": "BSD-2-Clause",
+    "metadata_url": "https://pypi.org/pypi/pygments/2.21.0/json",
+    "version": "2.21.0"
+  },
+  "pyobjc-core": {
+    "license_concluded": "MIT",
+    "license_declared": "MIT",
+    "metadata_url": "https://pypi.org/pypi/pyobjc-core/12.2.2/json",
+    "version": "12.2.2"
+  },
+  "pyobjc-framework-cocoa": {
+    "license_concluded": "MIT",
+    "license_declared": "MIT",
+    "metadata_url": "https://pypi.org/pypi/pyobjc-framework-cocoa/12.2.2/json",
+    "version": "12.2.2"
+  },
+  "pyobjc-framework-corebluetooth": {
+    "license_concluded": "MIT",
+    "license_declared": "MIT",
+    "metadata_url": "https://pypi.org/pypi/pyobjc-framework-corebluetooth/12.2.2/json",
+    "version": "12.2.2"
+  },
+  "pyobjc-framework-libdispatch": {
+    "license_concluded": "MIT",
+    "license_declared": "MIT",
+    "metadata_url": "https://pypi.org/pypi/pyobjc-framework-libdispatch/12.2.2/json",
+    "version": "12.2.2"
+  },
+  "pyserial": {
+    "license_concluded": "BSD-3-Clause",
+    "license_declared": "BSD-3-Clause",
+    "metadata_url": "https://pypi.org/pypi/pyserial/3.5/json",
+    "version": "3.5"
+  },
+  "pyside6": {
+    "license_concluded": "LGPL-3.0-only",
+    "license_declared": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+    "metadata_url": "https://pypi.org/pypi/pyside6/6.11.2/json",
+    "version": "6.11.2"
+  },
+  "pyside6-addons": {
+    "license_concluded": "LGPL-3.0-only",
+    "license_declared": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+    "metadata_url": "https://pypi.org/pypi/pyside6-addons/6.11.2/json",
+    "version": "6.11.2"
+  },
+  "pyside6-essentials": {
+    "license_concluded": "LGPL-3.0-only",
+    "license_declared": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+    "metadata_url": "https://pypi.org/pypi/pyside6-essentials/6.11.2/json",
+    "version": "6.11.2"
+  },
+  "pytest": {
+    "license_concluded": "MIT",
+    "license_declared": "MIT",
+    "metadata_url": "https://pypi.org/pypi/pytest/9.1.1/json",
+    "version": "9.1.1"
+  },
+  "pytest-qt": {
+    "license_concluded": "MIT",
+    "license_declared": "MIT",
+    "metadata_url": "https://pypi.org/pypi/pytest-qt/4.5.0/json",
+    "version": "4.5.0"
+  },
+  "pyusb": {
+    "license_concluded": "BSD-3-Clause",
+    "license_declared": "BSD-3-Clause",
+    "metadata_url": "https://pypi.org/pypi/pyusb/1.3.1/json",
+    "version": "1.3.1"
+  },
+  "referencing": {
+    "license_concluded": "MIT",
+    "license_declared": "MIT",
+    "metadata_url": "https://pypi.org/pypi/referencing/0.37.0/json",
+    "version": "0.37.0"
+  },
+  "rpds-py": {
+    "license_concluded": "MIT",
+    "license_declared": "MIT",
+    "metadata_url": "https://pypi.org/pypi/rpds-py/2026.6.3/json",
+    "version": "2026.6.3"
+  },
+  "ruff": {
+    "license_concluded": "MIT",
+    "license_declared": "MIT",
+    "metadata_url": "https://pypi.org/pypi/ruff/0.16.9/json",
+    "version": "0.16.9"
+  },
+  "shiboken6": {
+    "license_concluded": "LGPL-3.0-only",
+    "license_declared": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+    "metadata_url": "https://pypi.org/pypi/shiboken6/6.11.2/json",
+    "version": "6.11.2"
+  },
+  "sortedcontainers": {
+    "license_concluded": "Apache-2.0",
+    "license_declared": "Apache-2.0",
+    "metadata_url": "https://pypi.org/pypi/sortedcontainers/2.4.0/json",
+    "version": "2.4.0"
+  },
+  "structlog": {
+    "license_concluded": "MIT OR Apache-2.0",
+    "license_declared": "MIT OR Apache-2.0",
+    "metadata_url": "https://pypi.org/pypi/structlog/26.1.0/json",
+    "version": "26.1.0"
+  },
+  "typing-extensions": {
+    "license_concluded": "PSF-2.0",
+    "license_declared": "PSF-2.0",
+    "metadata_url": "https://pypi.org/pypi/typing-extensions/4.16.0/json",
+    "version": "4.16.0"
+  },
+  "typing-inspection": {
+    "license_concluded": "MIT",
+    "license_declared": "MIT",
+    "metadata_url": "https://pypi.org/pypi/typing-inspection/0.4.4/json",
+    "version": "0.4.4"
+  },
+  "tzdata": {
+    "license_concluded": "Apache-2.0",
+    "license_declared": "Apache-2.0",
+    "metadata_url": "https://pypi.org/pypi/tzdata/2026.4/json",
+    "version": "2026.4"
+  },
+  "winrt-runtime": {
+    "license_concluded": "MIT",
+    "license_declared": "MIT",
+    "metadata_url": "https://pypi.org/pypi/winrt-runtime/3.2.1/json",
+    "version": "3.2.1"
+  },
+  "winrt-windows-devices-bluetooth": {
+    "license_concluded": "MIT",
+    "license_declared": "MIT",
+    "metadata_url": "https://pypi.org/pypi/winrt-windows-devices-bluetooth/3.2.1/json",
+    "version": "3.2.1"
+  },
+  "winrt-windows-devices-bluetooth-advertisement": {
+    "license_concluded": "MIT",
+    "license_declared": "MIT",
+    "metadata_url": "https://pypi.org/pypi/winrt-windows-devices-bluetooth-advertisement/3.2.1/json",
+    "version": "3.2.1"
+  },
+  "winrt-windows-devices-bluetooth-genericattributeprofile": {
+    "license_concluded": "MIT",
+    "license_declared": "MIT",
+    "metadata_url": "https://pypi.org/pypi/winrt-windows-devices-bluetooth-genericattributeprofile/3.2.1/json",
+    "version": "3.2.1"
+  },
+  "winrt-windows-devices-enumeration": {
+    "license_concluded": "MIT",
+    "license_declared": "MIT",
+    "metadata_url": "https://pypi.org/pypi/winrt-windows-devices-enumeration/3.2.1/json",
+    "version": "3.2.1"
+  },
+  "winrt-windows-foundation": {
+    "license_concluded": "MIT",
+    "license_declared": "MIT",
+    "metadata_url": "https://pypi.org/pypi/winrt-windows-foundation/3.2.1/json",
+    "version": "3.2.1"
+  },
+  "winrt-windows-foundation-collections": {
+    "license_concluded": "MIT",
+    "license_declared": "MIT",
+    "metadata_url": "https://pypi.org/pypi/winrt-windows-foundation-collections/3.2.1/json",
+    "version": "3.2.1"
+  },
+  "winrt-windows-storage-streams": {
+    "license_concluded": "MIT",
+    "license_declared": "MIT",
+    "metadata_url": "https://pypi.org/pypi/winrt-windows-storage-streams/3.2.1/json",
+    "version": "3.2.1"
+  }
+}

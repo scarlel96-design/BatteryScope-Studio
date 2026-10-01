@@ -1,7 +1,7 @@
 import hashlib
+import json
 import sqlite3
 
-from batteryscope.core.config import AppConfig
 from batteryscope.devices.virtual.devices import VirtualC2
 from batteryscope.storage.chunks import ChunkWriter
 from batteryscope.storage.session import SessionState, SessionStore
@@ -23,6 +23,20 @@ def test_interrupted_session_and_orphan_recovery(tmp_path) -> None:
     reopened.close()
 
 
+def test_stopping_session_reopens_as_incomplete(tmp_path) -> None:
+    store = SessionStore(tmp_path)
+    session_id, path = store.create_session()
+    store.transition(session_id, path, SessionState.RUNNING)
+    store.transition(session_id, path, SessionState.STOPPING)
+    store.close()
+    reopened = SessionStore(tmp_path)
+    issues = reopened.recover_incomplete()
+    assert reopened.state(session_id) == SessionState.INCOMPLETE
+    assert any(issue.get("previous") == "STOPPING" for issue in issues)
+    assert (path / "manifest.json").read_text(encoding="utf-8").find('"status": "INCOMPLETE"') >= 0
+    reopened.close()
+
+
 def test_chunk_windows_finalize_and_integrity(tmp_path) -> None:
     store = SessionStore(tmp_path)
     session_id, path = store.create_session()
@@ -37,6 +51,24 @@ def test_chunk_windows_finalize_and_integrity(tmp_path) -> None:
         ).fetchone()
     assert (size, rows, first, last, digest) == (target.stat().st_size, 3, 1, 3,
                                                hashlib.sha256(target.read_bytes()).hexdigest())
+    store.close()
+
+
+def test_windows_unicode_space_path_chunk_and_replay(tmp_path) -> None:
+    from batteryscope.devices.replay import ReplayDevice
+
+    root = tmp_path / "한글 경로 with spaces"
+    store = SessionStore(root)
+    session_id, path = store.create_session(product={"name": "시험 장치"})
+    c2 = VirtualC2()
+    c2.connect()
+    target = ChunkWriter(store, session_id, path).write("virtual:c2", list(c2.samples(2)))
+    assert target.exists() and store.verify_chunks(session_id) == []
+    assert json.loads((path / "product_snapshot.json").read_text(encoding="utf-8"))["name"] == "시험 장치"
+    replay = ReplayDevice(target, expected_sha256=hashlib.sha256(target.read_bytes()).hexdigest())
+    replay.connect()
+    assert [sample.extras["original_sequence"] for sample in replay.samples(2)] == [1, 2]
+    replay.disconnect()
     store.close()
 
 

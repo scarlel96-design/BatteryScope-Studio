@@ -1,0 +1,5 @@
+COMMAND: uv run --locked python tools/verify_qml_shell.py
+INPUT: C:\Users\scarl\Documents\Codex\2026-10-01\batteryscope-studio-sol-work-order-01
+2026-10-02 02:51:09 [info     ] session.stopped                rows=8 session_id=6fbca853f9644c5881bdd6b6ce083223 state=ABORTED
+QML shell PASS: roots=1, actions=start/stop, status=ABORTED · 8 samples · SAFE, heartbeat_ticks=24, max_pause_ms=16.0, QtGraphs_loaded=false
+EXIT STATUS: 0

@@ -1,11 +1,13 @@
+import sqlite3
 from threading import Event as ThreadEvent
 
 import pytest
 
 from batteryscope.acquisition.engine import AcquisitionEngine, BackpressureExceeded
+from batteryscope.app.service import run_virtual_demo
 from batteryscope.core.config import AppConfig, BackpressurePolicy
 from batteryscope.core.events import EventBus
-from batteryscope.devices.virtual.devices import VirtualC2
+from batteryscope.devices.virtual.devices import VirtualC2, VirtualEBD
 from batteryscope.storage.chunks import ChunkWriter
 from batteryscope.storage.session import SessionStore
 
@@ -56,3 +58,28 @@ def test_sequence_gap_records_missing_count(tmp_path) -> None:
     assert len(gaps) == 1
     assert gaps[0].details == {"missing_count": 1, "expected_sequence": 3, "actual_sequence": 4}
     store.close()
+
+
+def test_fail_safe_pressure_aborts_active_virtual_load(monkeypatch, tmp_path) -> None:
+    original_stop = VirtualEBD.emergency_stop
+    stopped: list[bool] = []
+
+    def overflow(self, sample):
+        self.bus.publish(Event("BackpressureOverflow", sample.source_device_id,
+                               {"policy": "FAIL_SAFE", "quality_flag": "BACKPRESSURE_OVERFLOW"}))
+        raise BackpressureExceeded("injected persistent queue pressure")
+
+    def tracked_stop(self):
+        result = original_stop(self)
+        stopped.append(not self.load_enabled)
+        return result
+
+    from batteryscope.core.events import Event
+    monkeypatch.setattr(AcquisitionEngine, "submit", overflow)
+    monkeypatch.setattr(VirtualEBD, "emergency_stop", tracked_stop)
+    with pytest.raises(BackpressureExceeded):
+        run_virtual_demo(AppConfig(runtime_dir=tmp_path), sample_count=2)
+    with sqlite3.connect(tmp_path / "metadata.sqlite3") as db:
+        assert db.execute("SELECT status FROM sessions").fetchone()[0] == "FAILED"
+        assert db.execute("SELECT count(*) FROM events WHERE name='BackpressureOverflow'").fetchone()[0] == 1
+    assert stopped and all(stopped)

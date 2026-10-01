@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from PySide6.QtCore import QObject, Property, QThread, Signal, Slot
+from PySide6.QtCore import Property, QObject, QThread, Signal, Slot
 
 from batteryscope.app.service import run_virtual_demo
 from batteryscope.app.stop_channel import EmergencyStopChannel
@@ -23,7 +23,7 @@ class DemoWorker(QThread):
             result = run_virtual_demo(self.config, sample_count=250, stop_event=self.stop_channel.requested,
                                       stop_channel=self.stop_channel)
             self.completed.emit(f"{result['status']} · {result['rows']} samples · {result['load_state']}")
-        except Exception as error:
+        except Exception as error:  # noqa: BLE001 - report worker failure to UI
             self.failed.emit(f"Simulation failed: {type(error).__name__}: {error}")
 
 

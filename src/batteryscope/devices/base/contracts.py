@@ -2,10 +2,15 @@
 
 from __future__ import annotations
 
-from typing import Iterable, Protocol
+from collections.abc import Iterable
+from typing import Protocol
 
-from batteryscope.core.models import DeviceCapabilities, DeviceIdentity, MeasurementSample
 from batteryscope.core.errors import ProtocolError
+from batteryscope.core.models import (
+    DeviceCapabilities,
+    DeviceIdentity,
+    MeasurementSample,
+)
 from batteryscope.safety.stop import StopResult
 
 

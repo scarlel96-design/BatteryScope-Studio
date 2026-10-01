@@ -7,7 +7,12 @@ from math import isfinite
 
 from batteryscope.core.errors import SafetyError
 from batteryscope.core.events import Event, EventBus
-from batteryscope.core.models import DeviceCapabilities, LimitSourceKind, SourceKind, VerificationStatus
+from batteryscope.core.models import (
+    DeviceCapabilities,
+    LimitSourceKind,
+    SourceKind,
+    VerificationStatus,
+)
 from batteryscope.devices.base.contracts import ISafetyControllable
 from batteryscope.safety.stop import StopPhase, StopResult
 
@@ -71,7 +76,7 @@ class SafetyEngine:
             result = control.emergency_stop()
             if not isinstance(result, StopResult):
                 result = StopResult(StopPhase.ACKNOWLEDGED, detail="driver did not verify load-off")
-        except Exception as error:
+        except Exception as error:  # noqa: BLE001 - map physical stop failure to FAILED
             result = StopResult(StopPhase.FAILED, detail=f"{type(error).__name__}: {error}")
         self.last_stop = result
         event = Event(event_name, device_id, {"phase": result.phase.value, "already_safe": result.already_safe})
@@ -79,7 +84,7 @@ class SafetyEngine:
         try:
             self.bus.publish(event)
             self.pending_events.remove(event)
-        except Exception as error:
+        except Exception as error:  # noqa: BLE001 - persistence failure cannot mask stop result
             # Persistence failure is recorded in memory; caller still receives the stop result.
             self.event_dispatch_errors.append(error)
         return result

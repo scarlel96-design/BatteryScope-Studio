@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from enum import StrEnum
 from math import isfinite
 from typing import Any
@@ -63,7 +63,7 @@ class VerifiedValue(BaseModel):
     verified_at: datetime | None = None
 
     @model_validator(mode="after")
-    def consistent(self) -> "VerifiedValue":
+    def consistent(self) -> VerifiedValue:
         if self.verification_status == VerificationStatus.UNKNOWN and self.value is not None:
             raise ValueError("UNKNOWN value must be absent")
         if self.verification_status != VerificationStatus.UNKNOWN and self.value is None:
@@ -103,7 +103,7 @@ class DeviceIdentity(BaseModel):
     evidence: tuple[str, ...] = ()
 
     @model_validator(mode="after")
-    def namespace_matches_kind(self) -> "DeviceIdentity":
+    def namespace_matches_kind(self) -> DeviceIdentity:
         prefix = {SourceKind.REAL: "physical:", SourceKind.SIMULATED: "virtual:", SourceKind.REPLAYED: "replay:"}[self.kind]
         if not self.device_id.startswith(prefix):
             raise ValueError(f"device_id must start with {prefix}")
@@ -133,10 +133,10 @@ class MeasurementSample(BaseModel):
     def utc_required(cls, value: datetime) -> datetime:
         if value.tzinfo is None or value.utcoffset() is None:
             raise ValueError("UTC timestamp must be timezone-aware")
-        return value.astimezone(timezone.utc)
+        return value.astimezone(UTC)
 
     @model_validator(mode="after")
-    def provenance(self) -> "MeasurementSample":
+    def provenance(self) -> MeasurementSample:
         prefix = {SourceKind.REAL: "physical:", SourceKind.SIMULATED: "virtual:", SourceKind.REPLAYED: "replay:"}[self.source_kind]
         if not self.source_device_id.startswith(prefix):
             raise ValueError(f"source_device_id must start with {prefix}")

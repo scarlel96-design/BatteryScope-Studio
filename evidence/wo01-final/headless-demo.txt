@@ -1,0 +1,42 @@
+COMMAND: uv run --locked batteryscope --headless-demo --runtime-dir runtime/wo01-final-demo
+INPUT: C:\Users\scarl\Documents\Codex\2026-10-01\batteryscope-studio-sol-work-order-01
+{"session_id": "04d6a17a78b842e4ba7cce87c62db825", "rows": 16, "state": "ABORTED", "event": "session.stopped", "timestamp": "2026-10-01T17:51:10.525342Z"}
+{
+  "avg_current_a": 2.0,
+  "avg_voltage_v": 19.980000000000004,
+  "chunk_write_bytes_per_second": 126407.05102338048,
+  "chunks_created": 2,
+  "devices": [
+    "virtual:c2",
+    "virtual:ebd"
+  ],
+  "devices_connected": [
+    "virtual:c2",
+    "virtual:ebd"
+  ],
+  "duckdb_query_ms": 41.33029999957216,
+  "duckdb_row_count": 16,
+  "emergency_stop_phase": "VERIFIED_OFF",
+  "emergency_stop_state": "VERIFIED_OFF",
+  "events": 10,
+  "events_written": 10,
+  "ingestion_samples_per_second": 81.61691265649907,
+  "load_enabled": false,
+  "load_state": "SAFE",
+  "max_current_a": 2.0,
+  "max_voltage_v": 20.0,
+  "min_current_a": 2.0,
+  "min_voltage_v": 19.96,
+  "queue_max_depth": 16,
+  "raw_chunks": 2,
+  "recovery_issues": 0,
+  "rows": 16,
+  "samples_generated": 16,
+  "samples_written": 16,
+  "session_id": "04d6a17a78b842e4ba7cce87c62db825",
+  "session_path": "runtime\\wo01-final-demo\\sessions\\04d6a17a78b842e4ba7cce87c62db825",
+  "session_state": "ABORTED",
+  "status": "ABORTED",
+  "sum_power_w": 639.3600000000001
+}
+EXIT STATUS: 0

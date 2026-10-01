@@ -1,3 +1,5 @@
+from datetime import UTC
+
 import pytest
 
 from batteryscope.core.events import EventBus
@@ -35,3 +37,34 @@ def test_load_failure_and_emergency_stop() -> None:
     assert ebd.state == LoadState.SAFE
     SafetyEngine(EventBus()).emergency_stop(ebd, "virtual-ebd")
     assert ebd.state == LoadState.SAFE
+
+
+def test_faults_change_measurement_and_load_state() -> None:
+    sag = VirtualC2(scenario="voltage_sag")
+    sag.connect()
+    voltages = [sample.voltage_v for sample in sag.samples(3)]
+    assert voltages == [20.0, 20.0, 17.6]
+    disagreement = VirtualC2(scenario="sensor_disagreement")
+    disagreement.connect()
+    assert QualityFlag.SENSOR_WARNING in list(disagreement.samples(3))[-1].quality_flags
+    cutoff = VirtualEBD(scenario="unexpected_cutoff")
+    cutoff.connect()
+    cutoff.set_constant_current(2)
+    cutoff.load_on()
+    list(cutoff.samples(3))
+    assert cutoff.state == LoadState.SAFE and not cutoff.load_enabled
+
+
+def test_virtual_battery_stream_is_reproducible_for_same_seed() -> None:
+    from datetime import datetime
+
+    def stream() -> list[tuple[int, float, float, float, float, float]]:
+        device = VirtualEBD(scenario="voltage_sag", seed=381992,
+                            clock=lambda: (99, datetime(2026, 1, 1, tzinfo=UTC)))
+        device.connect()
+        device.set_constant_current(2)
+        device.load_on()
+        return [(item.sequence, item.voltage_v, item.current_a, item.power_w,
+                 item.accumulated_ah, item.accumulated_wh) for item in device.samples(5)]
+
+    assert stream() == stream()

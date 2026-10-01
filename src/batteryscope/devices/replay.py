@@ -5,14 +5,21 @@ from __future__ import annotations
 import csv
 import hashlib
 import json
+from collections.abc import Iterable
 from enum import StrEnum
 from pathlib import Path
-from typing import Iterable
 
 import pyarrow.parquet as pq
 
-from batteryscope.core.models import DeviceCapabilities, DeviceIdentity, MeasurementSample, QualityFlag, SourceKind, SupportStatus
 from batteryscope.core.errors import ReplayError
+from batteryscope.core.models import (
+    DeviceCapabilities,
+    DeviceIdentity,
+    MeasurementSample,
+    QualityFlag,
+    SourceKind,
+    SupportStatus,
+)
 from batteryscope.devices.virtual.devices import Clock, host_clock
 
 

@@ -1,6 +1,7 @@
 .bootstrap/
 .venv/
 .pytest_cache/
+pytest-cache-files-*/
 .hypothesis/
 __pycache__/
 *.py[cod]

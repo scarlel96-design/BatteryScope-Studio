@@ -2,21 +2,20 @@
 
 from __future__ import annotations
 
-import json
 import hashlib
+import json
 import os
 import sqlite3
-from datetime import datetime, timezone
+from collections.abc import Callable
+from datetime import UTC, datetime
 from enum import StrEnum
 from pathlib import Path
 from threading import RLock
-from typing import Callable
 from uuid import uuid4
 
+from batteryscope import __version__
 from batteryscope.core.errors import StorageError
 from batteryscope.core.events import Event
-from batteryscope import __version__
-
 
 SCHEMA_VERSION = 3
 Migration = Callable[[sqlite3.Connection], None]
@@ -81,7 +80,7 @@ class SessionStore:
         self._create_schema()
         with self._lock, self.connection:
             self.connection.execute("INSERT OR IGNORE INTO app_versions VALUES (?,?)",
-                                    (__version__, datetime.now(timezone.utc).isoformat()))
+                                    (__version__, datetime.now(UTC).isoformat()))
 
     def _create_schema(self) -> None:
         self.connection.executescript("""
@@ -146,7 +145,7 @@ class SessionStore:
             ).fetchall()
             for session_id, path_string, old_status in rows:
                 self.connection.execute("UPDATE sessions SET status='INCOMPLETE',ended_at=? WHERE session_id=?",
-                                        (datetime.now(timezone.utc).isoformat(), session_id))
+                                        (datetime.now(UTC).isoformat(), session_id))
                 issues.append({"session_id": session_id, "path": path_string, "kind": "INTERRUPTED", "previous": old_status})
             sessions = self.connection.execute("SELECT session_id,path FROM sessions").fetchall()
             for session_id, path_string in sessions:
@@ -217,7 +216,7 @@ class SessionStore:
         path = self.runtime_dir / "sessions" / session_id
         for folder in ("raw", "events", "analysis"):
             (path / folder).mkdir(parents=True, exist_ok=True)
-        started_at = datetime.now(timezone.utc).isoformat()
+        started_at = datetime.now(UTC).isoformat()
         provenance = provenance or {}
         for name, data in (
             ("manifest.json", {"session_id": session_id, "started_at": started_at, "status": SessionState.CREATED.value,
@@ -246,7 +245,7 @@ class SessionStore:
             old_state = self.state(session_id)
             if new_state not in TRANSITIONS.get(old_state, frozenset()):
                 raise StorageError(f"invalid session transition {old_state} -> {new_state}")
-            ended_at = datetime.now(timezone.utc).isoformat() if new_state in (
+            ended_at = datetime.now(UTC).isoformat() if new_state in (
                 SessionState.COMPLETE, SessionState.ABORTED, SessionState.INCOMPLETE, SessionState.FAILED
             ) else None
             self.connection.execute("UPDATE sessions SET status=?,ended_at=? WHERE session_id=?",

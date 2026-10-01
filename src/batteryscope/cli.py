@@ -29,6 +29,7 @@ def main() -> int:
         startup_store.close()
     from PySide6.QtQml import QQmlApplicationEngine
     from PySide6.QtWidgets import QApplication
+
     from batteryscope.ui.bridge import BackendBridge
 
     application = QApplication([])

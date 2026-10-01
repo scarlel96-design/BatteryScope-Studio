@@ -20,7 +20,7 @@ def main() -> None:
     result = run_virtual_demo(AppConfig(runtime_dir=args.runtime_dir), sample_count=args.samples_per_device)
     summary = {key: result[key] for key in (
         "session_id", "rows", "raw_chunks", "queue_max_depth", "ingestion_samples_per_second",
-        "duckdb_query_ms", "status", "emergency_stop_phase")}
+        "duckdb_query_ms", "chunk_write_bytes_per_second", "status", "emergency_stop_phase")}
     print(json.dumps(summary, indent=2, sort_keys=True))
 
 

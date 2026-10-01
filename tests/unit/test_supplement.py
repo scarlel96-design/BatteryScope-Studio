@@ -1,16 +1,22 @@
 import pytest
 from pydantic import ValidationError
 
-from batteryscope.core.errors import StorageError
 from batteryscope.app.stop_channel import EmergencyStopChannel
+from batteryscope.core.errors import StorageError
 from batteryscope.core.events import EventBus
-from batteryscope.core.models import DeviceCapabilities, LimitSourceKind, SourceKind, VerificationStatus, VerifiedValue
+from batteryscope.core.models import (
+    DeviceCapabilities,
+    LimitSourceKind,
+    PluginManifest,
+    SourceKind,
+    VerificationStatus,
+    VerifiedValue,
+)
 from batteryscope.devices.base.contracts import NotVerifiedProtocolError
 from batteryscope.devices.c2.driver import C2ProDriver
 from batteryscope.devices.ebd.driver import EBDA20HDriver
 from batteryscope.devices.virtual.devices import VirtualEBD
 from batteryscope.plugins.registry import PluginRegistry
-from batteryscope.core.models import PluginManifest
 from batteryscope.safety.engine import LoadRequest, SafetyDenied, SafetyEngine
 from batteryscope.safety.stop import StopPhase
 

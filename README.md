@@ -4,7 +4,7 @@ BatteryScope Studio is a local-first foundation for PC-based USB power and batte
 
 ## Current implementation
 
-The CLI initializes a capability-based device registry, discovers and connects Virtual C2 and Virtual EBD, captures canonical samples, writes SQLite metadata and ZSTD Parquet chunks, triggers an emergency stop, and queries saved rows with DuckDB. The emergency demo ends in `ABORTED`; a process interruption is `INCOMPLETE`. The Qt Quick/QML window is a minimal shell.
+The CLI initializes a capability-based device registry, discovers and connects Virtual C2 and Virtual EBD, captures canonical samples, writes SQLite metadata and ZSTD Parquet chunks, triggers an emergency stop, and queries saved rows with DuckDB. The emergency demo ends in `ABORTED`; a process interruption is `INCOMPLETE`. The Qt Quick/QML window is a minimal shell. The Windows/Python 3.12 WO01 foundation gates are recorded in `evidence/wo01-final/`.
 
 | Device | Discovery | Telemetry | Control |
 | --- | --- | --- | --- |
@@ -20,14 +20,15 @@ Physical VID/PID, frames, limits, and write methods are unknown. The physical dr
 Use Python 3.12. The project declares `>=3.12,<3.13`. Install [uv](https://docs.astral.sh/uv/), then run:
 
 ```powershell
-uv sync --group dev
-uv run pytest
-uv run python tools/verify_architecture.py
+uv sync --locked --group dev
+uv run --locked pytest
+uv run --locked python tools/verify_architecture.py
+uv run --locked python tools/verify_qml_shell.py
 uv run batteryscope --headless-demo --runtime-dir runtime
 uv run batteryscope
 ```
 
-`uv sync --group device-extra` adds optional USB HID/BLE discovery dependencies. Generated sessions in `runtime/` are ignored by Git. `--headless-demo` prints the session ID, row/chunk/event counts, final state, stop phase, query result, and baseline timing metrics.
+`uv sync --locked --group device-extra` adds optional USB HID/BLE discovery dependencies. Generated sessions in `runtime/` are ignored by Git. `--headless-demo` prints the session ID, generated/written sample counts, chunk/event counts, final state, stop phase, DuckDB counts and baseline timing metrics. Run `uv run --locked python tools/generate_supply_chain.py` to regenerate the direct-dependency BOM and full locked-graph SPDX SBOM from reviewed license evidence.
 
 ## Safety and limitations
 

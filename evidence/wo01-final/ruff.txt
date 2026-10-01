@@ -1,0 +1,4 @@
+COMMAND: uv run --locked ruff check src tests tools
+INPUT: C:\Users\scarl\Documents\Codex\2026-10-01\batteryscope-studio-sol-work-order-01
+All checks passed!
+EXIT STATUS: 0

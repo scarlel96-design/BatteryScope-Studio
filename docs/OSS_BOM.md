@@ -1,24 +1,28 @@
-# OSS bill of materials (declared direct dependencies)
+# OSS bill of materials (uv.lock)
 
-This table describes declared dependencies, not an installed or locked environment. `uv.lock` resolution and package-license audit must be performed on an environment with package access before release. Exact versions are intentionally recorded as `UNRESOLVED` until a lock is generated; architecture verification reports this as a failed reproducibility gate.
+Resolver-locked graph: **50 packages** across supported platform markers. Direct dependencies below are version-matched to `uv.lock`; optional device libraries are not part of the default runtime install. The full graph is in `SBOM.spdx.json`.
 
 | Name | Version | Purpose | License | Repository | Scope | Reason selected | Alternative |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| pydantic | UNRESOLVED (`>=2.10,<3`) | typed validation | MIT | https://github.com/pydantic/pydantic | Runtime | strict models | attrs |
-| pyarrow | UNRESOLVED (`>=19,<25`) | Arrow/Parquet | Apache-2.0 | https://github.com/apache/arrow | Runtime | columnar raw | parquet-rs service |
-| duckdb | UNRESOLVED (`>=1.2,<2`) | raw SQL readback | MIT | https://github.com/duckdb/duckdb | Runtime | embedded analytics | SQLite aggregate |
-| structlog | UNRESOLVED (`>=25,<27`) | structured logging | MIT/Apache-2.0 | https://github.com/hynek/structlog | Runtime | structured events | logging JSON formatter |
-| PySide6 | UNRESOLVED (`>=6.8,<7`) | Qt Quick shell | LGPL-3.0/commercial; module audit required | https://code.qt.io/cgit/pyside/pyside-setup.git | Runtime | QML bridge | other GUI stack |
-| pyserial | UNRESOLVED (`>=3.5,<4`) | serial candidate listing | BSD-3-Clause | https://github.com/pyserial/pyserial | Runtime | cross-platform COM enumeration | OS API |
-| jsonschema | UNRESOLVED (`>=4.23,<5`) | manifest schema validation | MIT | https://github.com/python-jsonschema/jsonschema | Runtime | language-neutral plugin contract | Pydantic only |
-| pyusb | UNRESOLVED (`>=1.3,<2`) | generic USB enumeration | BSD-3-Clause | https://github.com/pyusb/pyusb | Device-extra | transport candidate | OS API |
-| hidapi | UNRESOLVED (`>=0.14,<1`) | future HID transport | BSD/MIT/GPL selectable; review binary build | https://github.com/trezor/cython-hidapi | Device-extra | optional HID access | OS API |
-| bleak | UNRESOLVED (`>=0.22,<2`) | future BLE transport | MIT | https://github.com/hbldh/bleak | Device-extra | cross-platform BLE | OS API |
-| pytest | UNRESOLVED (`>=8.3,<10`) | tests | MIT | https://github.com/pytest-dev/pytest | Dev | test runner | unittest |
-| pytest-qt | UNRESOLVED (`>=4.4,<5`) | Qt tests | MIT | https://github.com/pytest-dev/pytest-qt | Dev | event-loop checks | direct QCoreApplication |
-| hypothesis | UNRESOLVED (`>=6.120,<7`) | property tests | MPL-2.0 | https://github.com/HypothesisWorks/hypothesis | Dev | invalid-input exploration | custom fuzzing |
-| ruff | UNRESOLVED (`>=0.9,<1`) | static lint | MIT | https://github.com/astral-sh/ruff | Dev | fast lint | flake8 |
-| mypy | UNRESOLVED (`>=1.14,<2`) | type checks | MIT | https://github.com/python/mypy | Dev | type drift | pyright |
-| hatchling | UNRESOLVED (`>=1.26`) | package build | MIT | https://github.com/pypa/hatch | Build | PEP 517 backend | setuptools |
+| pydantic | 2.13.5 | typed configuration and sample validation | MIT | https://pypi.org/pypi/pydantic/2.13.5/json | Runtime | strict models | attrs |
+| pyarrow | 24.0.0 | Arrow and ZSTD Parquet raw chunks | Apache-2.0 | https://pypi.org/pypi/pyarrow/24.0.0/json | Runtime | columnar raw persistence | parquet-rs service |
+| duckdb | 1.5.6 | Parquet SQL readback | MIT | https://pypi.org/pypi/duckdb/1.5.6/json | Runtime | embedded analytical queries | SQLite aggregate |
+| structlog | 26.1.0 | structured technical logging | MIT OR Apache-2.0 | https://pypi.org/pypi/structlog/26.1.0/json | Runtime | structured events | logging JSON formatter |
+| pyside6 | 6.11.2 | Qt Quick QML shell | LGPL-3.0-only | https://pypi.org/pypi/pyside6/6.11.2/json | Runtime | QML bridge | other GUI stack |
+| pyserial | 3.5 | read-only COM candidate listing | BSD-3-Clause | https://pypi.org/pypi/pyserial/3.5/json | Runtime | cross-platform enumeration | OS API |
+| jsonschema | 4.26.0 | plugin manifest schema | MIT | https://pypi.org/pypi/jsonschema/4.26.0/json | Runtime | language-neutral contract | Pydantic only |
+| tzdata | 2026.4 | Windows UTC Parquet replay | Apache-2.0 | https://pypi.org/pypi/tzdata/2026.4/json | Runtime on Windows | timezone conversion | system zoneinfo |
+| pyusb | 1.3.1 | optional USB candidate listing | BSD-3-Clause | https://pypi.org/pypi/pyusb/1.3.1/json | Device-extra | transport candidate | OS API |
+| hidapi | 0.15.0 | optional HID transport | BSD-3-Clause | https://pypi.org/pypi/hidapi/0.15.0/json | Device-extra | future HID access | OS API |
+| bleak | 1.1.1 | optional BLE transport | MIT | https://pypi.org/pypi/bleak/1.1.1/json | Device-extra | future BLE access | OS API |
+| pytest | 9.1.1 | automated tests | MIT | https://pypi.org/pypi/pytest/9.1.1/json | Dev | test runner | unittest |
+| pytest-qt | 4.5.0 | Qt event-loop tests | MIT | https://pypi.org/pypi/pytest-qt/4.5.0/json | Dev | heartbeat checks | direct QCoreApplication |
+| hypothesis | 6.168.3 | property tests | MPL-2.0 | https://pypi.org/pypi/hypothesis/6.168.3/json | Dev | invalid-input exploration | custom fuzzing |
+| ruff | 0.16.9 | static lint | MIT | https://pypi.org/pypi/ruff/0.16.9/json | Dev | fast lint | flake8 |
+| mypy | 1.20.2 | type analysis | MIT | https://pypi.org/pypi/mypy/1.20.2/json | Dev | type drift | pyright |
 
-Python `sqlite3` and `json` are standard library modules. `uv` is a development tool and is absent from the current host; its lock and resolved version are pending. Transitive dependency names, versions, and licenses must come from the eventual lock/SBOM, not this direct-dependency table.
+The license conclusion for optional `hidapi` selects its bundled BSD-style option; the wheel also declares GPL-3.0 as an alternative. Qt/PySide6 declares LGPL/GPL alternatives; this baseline uses only the audited Qt Quick module set under LGPL, with distribution obligations still requiring packaging review.
+
+`hatchling` is a PEP 517 build backend resolved in build isolation, not a locked application dependency. `uv` is a bootstrap/development tool, not in this project lock. The local project package has no distribution license selected and is `NOASSERTION` in SPDX; this is separate from third-party license review.
+
+License evidence: `docs/lock_license_evidence.json` records version-pinned PyPI metadata URLs and reviewed conclusions. No locked third-party package is `UNKNOWN`.

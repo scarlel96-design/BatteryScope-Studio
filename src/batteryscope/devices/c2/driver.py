@@ -2,7 +2,12 @@
 
 from __future__ import annotations
 
-from batteryscope.core.models import DeviceCapabilities, DeviceIdentity, SourceKind, SupportStatus
+from batteryscope.core.models import (
+    DeviceCapabilities,
+    DeviceIdentity,
+    SourceKind,
+    SupportStatus,
+)
 from batteryscope.devices.base.contracts import NotVerifiedProtocolError
 
 

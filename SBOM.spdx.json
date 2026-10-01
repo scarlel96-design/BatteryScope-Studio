@@ -1,0 +1,1249 @@
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "creationInfo": {
+    "created": "2026-10-02T00:00:00Z",
+    "creators": [
+      "Tool: tools/generate_supply_chain.py"
+    ]
+  },
+  "dataLicense": "CC0-1.0",
+  "documentDescribes": [
+    "SPDXRef-Package-batteryscope-studio"
+  ],
+  "documentNamespace": "https://github.com/scarlel96-design/BatteryScope-Studio/spdx/uv-lock-7c0006f40535592a7049dc9c8546437e81a4d991312dbde2cadbcaa76990e0f4",
+  "name": "BatteryScope Studio WO01 locked dependency graph",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-Package-annotated-types",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/annotated-types/0.8.0/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/annotated-types@0.8.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "name": "annotated-types",
+      "versionInfo": "0.8.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-attrs",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/attrs/26.1.0/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/attrs@26.1.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "name": "attrs",
+      "versionInfo": "26.1.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-batteryscope-studio",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [],
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "batteryscope-studio",
+      "versionInfo": "0.1.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-bleak",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/bleak/1.1.1/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/bleak@1.1.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "name": "bleak",
+      "versionInfo": "1.1.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-colorama",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/colorama/0.4.6/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/colorama@0.4.6",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "licenseDeclared": "BSD-3-Clause",
+      "name": "colorama",
+      "versionInfo": "0.4.6"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-dbus-fast",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/dbus-fast/5.0.25/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/dbus-fast@5.0.25",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "name": "dbus-fast",
+      "versionInfo": "5.0.25"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-duckdb",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/duckdb/1.5.6/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/duckdb@1.5.6",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "name": "duckdb",
+      "versionInfo": "1.5.6"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-hidapi",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/hidapi/0.15.0/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/hidapi@0.15.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "licenseDeclared": "BSD-3-Clause OR GPL-3.0-only",
+      "name": "hidapi",
+      "versionInfo": "0.15.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-hypothesis",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/hypothesis/6.168.3/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/hypothesis@6.168.3",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MPL-2.0",
+      "licenseDeclared": "MPL-2.0",
+      "name": "hypothesis",
+      "versionInfo": "6.168.3"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-iniconfig",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/iniconfig/2.3.0/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/iniconfig@2.3.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "name": "iniconfig",
+      "versionInfo": "2.3.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-jsonschema",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/jsonschema/4.26.0/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/jsonschema@4.26.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "name": "jsonschema",
+      "versionInfo": "4.26.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-jsonschema-specifications",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/jsonschema-specifications/2025.9.1/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/jsonschema-specifications@2025.9.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "name": "jsonschema-specifications",
+      "versionInfo": "2025.9.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-librt",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/librt/0.16.0/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/librt@0.16.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "name": "librt",
+      "versionInfo": "0.16.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-mypy",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/mypy/1.20.2/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/mypy@1.20.2",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "name": "mypy",
+      "versionInfo": "1.20.2"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-mypy-extensions",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/mypy-extensions/1.1.0/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/mypy-extensions@1.1.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "name": "mypy-extensions",
+      "versionInfo": "1.1.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-packaging",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/packaging/26.3/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/packaging@26.3",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0 OR BSD-2-Clause",
+      "licenseDeclared": "Apache-2.0 OR BSD-2-Clause",
+      "name": "packaging",
+      "versionInfo": "26.3"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-pathspec",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/pathspec/1.1.1/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/pathspec@1.1.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MPL-2.0",
+      "licenseDeclared": "MPL-2.0",
+      "name": "pathspec",
+      "versionInfo": "1.1.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-pluggy",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/pluggy/1.6.0/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/pluggy@1.6.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "name": "pluggy",
+      "versionInfo": "1.6.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-pyarrow",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/pyarrow/24.0.0/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/pyarrow@24.0.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "name": "pyarrow",
+      "versionInfo": "24.0.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-pydantic",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/pydantic/2.13.5/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/pydantic@2.13.5",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "name": "pydantic",
+      "versionInfo": "2.13.5"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-pydantic-core",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/pydantic-core/2.46.5/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/pydantic-core@2.46.5",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "name": "pydantic-core",
+      "versionInfo": "2.46.5"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-pygments",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/pygments/2.21.0/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/pygments@2.21.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-2-Clause",
+      "licenseDeclared": "BSD-2-Clause",
+      "name": "pygments",
+      "versionInfo": "2.21.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-pyobjc-core",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/pyobjc-core/12.2.2/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/pyobjc-core@12.2.2",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "name": "pyobjc-core",
+      "versionInfo": "12.2.2"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-pyobjc-framework-cocoa",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/pyobjc-framework-cocoa/12.2.2/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/pyobjc-framework-cocoa@12.2.2",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "name": "pyobjc-framework-cocoa",
+      "versionInfo": "12.2.2"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-pyobjc-framework-corebluetooth",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/pyobjc-framework-corebluetooth/12.2.2/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/pyobjc-framework-corebluetooth@12.2.2",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "name": "pyobjc-framework-corebluetooth",
+      "versionInfo": "12.2.2"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-pyobjc-framework-libdispatch",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/pyobjc-framework-libdispatch/12.2.2/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/pyobjc-framework-libdispatch@12.2.2",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "name": "pyobjc-framework-libdispatch",
+      "versionInfo": "12.2.2"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-pyserial",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/pyserial/3.5/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/pyserial@3.5",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "licenseDeclared": "BSD-3-Clause",
+      "name": "pyserial",
+      "versionInfo": "3.5"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-pyside6",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/pyside6/6.11.2/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/pyside6@6.11.2",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "LGPL-3.0-only",
+      "licenseDeclared": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+      "name": "pyside6",
+      "versionInfo": "6.11.2"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-pyside6-addons",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/pyside6-addons/6.11.2/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/pyside6-addons@6.11.2",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "LGPL-3.0-only",
+      "licenseDeclared": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+      "name": "pyside6-addons",
+      "versionInfo": "6.11.2"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-pyside6-essentials",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/pyside6-essentials/6.11.2/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/pyside6-essentials@6.11.2",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "LGPL-3.0-only",
+      "licenseDeclared": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+      "name": "pyside6-essentials",
+      "versionInfo": "6.11.2"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-pytest",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/pytest/9.1.1/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/pytest@9.1.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "name": "pytest",
+      "versionInfo": "9.1.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-pytest-qt",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/pytest-qt/4.5.0/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/pytest-qt@4.5.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "name": "pytest-qt",
+      "versionInfo": "4.5.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-pyusb",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/pyusb/1.3.1/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/pyusb@1.3.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "licenseDeclared": "BSD-3-Clause",
+      "name": "pyusb",
+      "versionInfo": "1.3.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-referencing",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/referencing/0.37.0/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/referencing@0.37.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "name": "referencing",
+      "versionInfo": "0.37.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-rpds-py",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/rpds-py/2026.6.3/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/rpds-py@2026.6.3",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "name": "rpds-py",
+      "versionInfo": "2026.6.3"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-ruff",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/ruff/0.16.9/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/ruff@0.16.9",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "name": "ruff",
+      "versionInfo": "0.16.9"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-shiboken6",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/shiboken6/6.11.2/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/shiboken6@6.11.2",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "LGPL-3.0-only",
+      "licenseDeclared": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+      "name": "shiboken6",
+      "versionInfo": "6.11.2"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-sortedcontainers",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/sortedcontainers/2.4.0/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/sortedcontainers@2.4.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "name": "sortedcontainers",
+      "versionInfo": "2.4.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-structlog",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/structlog/26.1.0/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/structlog@26.1.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT OR Apache-2.0",
+      "licenseDeclared": "MIT OR Apache-2.0",
+      "name": "structlog",
+      "versionInfo": "26.1.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-typing-extensions",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/typing-extensions/4.16.0/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/typing-extensions@4.16.0",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "PSF-2.0",
+      "licenseDeclared": "PSF-2.0",
+      "name": "typing-extensions",
+      "versionInfo": "4.16.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-typing-inspection",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/typing-inspection/0.4.4/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/typing-inspection@0.4.4",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "name": "typing-inspection",
+      "versionInfo": "0.4.4"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-tzdata",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/tzdata/2026.4/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/tzdata@2026.4",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "name": "tzdata",
+      "versionInfo": "2026.4"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-winrt-runtime",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/winrt-runtime/3.2.1/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/winrt-runtime@3.2.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "name": "winrt-runtime",
+      "versionInfo": "3.2.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-winrt-windows-devices-bluetooth",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/winrt-windows-devices-bluetooth/3.2.1/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/winrt-windows-devices-bluetooth@3.2.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "name": "winrt-windows-devices-bluetooth",
+      "versionInfo": "3.2.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-winrt-windows-devices-bluetooth-advertisement",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/winrt-windows-devices-bluetooth-advertisement/3.2.1/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/winrt-windows-devices-bluetooth-advertisement@3.2.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "name": "winrt-windows-devices-bluetooth-advertisement",
+      "versionInfo": "3.2.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-winrt-windows-devices-bluetooth-genericattributeprofile",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/winrt-windows-devices-bluetooth-genericattributeprofile/3.2.1/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/winrt-windows-devices-bluetooth-genericattributeprofile@3.2.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "name": "winrt-windows-devices-bluetooth-genericattributeprofile",
+      "versionInfo": "3.2.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-winrt-windows-devices-enumeration",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/winrt-windows-devices-enumeration/3.2.1/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/winrt-windows-devices-enumeration@3.2.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "name": "winrt-windows-devices-enumeration",
+      "versionInfo": "3.2.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-winrt-windows-foundation",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/winrt-windows-foundation/3.2.1/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/winrt-windows-foundation@3.2.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "name": "winrt-windows-foundation",
+      "versionInfo": "3.2.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-winrt-windows-foundation-collections",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/winrt-windows-foundation-collections/3.2.1/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/winrt-windows-foundation-collections@3.2.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "name": "winrt-windows-foundation-collections",
+      "versionInfo": "3.2.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-winrt-windows-storage-streams",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/pypi/winrt-windows-storage-streams/3.2.1/json",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:pypi/winrt-windows-storage-streams@3.2.1",
+          "referenceType": "purl"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "name": "winrt-windows-storage-streams",
+      "versionInfo": "3.2.1"
+    }
+  ],
+  "relationships": [
+    {
+      "relatedSpdxElement": "SPDXRef-Package-bleak",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-batteryscope-studio"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-bleak",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-batteryscope-studio"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-duckdb",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-batteryscope-studio"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-hidapi",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-batteryscope-studio"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-hidapi",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-batteryscope-studio"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-hypothesis",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-batteryscope-studio"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-jsonschema",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-batteryscope-studio"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-mypy",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-batteryscope-studio"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-pyarrow",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-batteryscope-studio"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-pydantic",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-batteryscope-studio"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-pyserial",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-batteryscope-studio"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-pyside6",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-batteryscope-studio"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-pytest",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-batteryscope-studio"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-pytest-qt",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-batteryscope-studio"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-pyusb",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-batteryscope-studio"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-pyusb",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-batteryscope-studio"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-ruff",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-batteryscope-studio"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-structlog",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-batteryscope-studio"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-tzdata",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-batteryscope-studio"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-dbus-fast",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-bleak"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-pyobjc-core",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-bleak"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-pyobjc-framework-corebluetooth",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-bleak"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-pyobjc-framework-libdispatch",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-bleak"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-winrt-runtime",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-bleak"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-winrt-windows-devices-bluetooth",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-bleak"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-winrt-windows-devices-bluetooth-advertisement",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-bleak"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-winrt-windows-devices-bluetooth-genericattributeprofile",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-bleak"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-winrt-windows-devices-enumeration",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-bleak"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-winrt-windows-foundation",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-bleak"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-winrt-windows-foundation-collections",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-bleak"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-winrt-windows-storage-streams",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-bleak"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-sortedcontainers",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-hypothesis"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-attrs",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-jsonschema"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-jsonschema-specifications",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-jsonschema"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-referencing",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-jsonschema"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-rpds-py",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-jsonschema"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-referencing",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-jsonschema-specifications"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-librt",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-mypy"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-mypy-extensions",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-mypy"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-pathspec",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-mypy"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-typing-extensions",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-mypy"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-annotated-types",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-pydantic"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-pydantic-core",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-pydantic"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-typing-extensions",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-pydantic"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-typing-inspection",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-pydantic"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-typing-extensions",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-pydantic-core"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-pyobjc-core",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-pyobjc-framework-cocoa"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-pyobjc-core",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-pyobjc-framework-corebluetooth"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-pyobjc-framework-cocoa",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-pyobjc-framework-corebluetooth"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-pyobjc-core",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-pyobjc-framework-libdispatch"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-pyobjc-framework-cocoa",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-pyobjc-framework-libdispatch"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-pyside6-addons",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-pyside6"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-pyside6-essentials",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-pyside6"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-shiboken6",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-pyside6"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-pyside6-essentials",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-pyside6-addons"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-shiboken6",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-pyside6-addons"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-shiboken6",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-pyside6-essentials"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-colorama",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-pytest"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-iniconfig",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-pytest"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-packaging",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-pytest"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-pluggy",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-pytest"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-pygments",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-pytest"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-pluggy",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-pytest-qt"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-pytest",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-pytest-qt"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-typing-extensions",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-pytest-qt"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-attrs",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-referencing"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-rpds-py",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-referencing"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-typing-extensions",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-referencing"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-typing-extensions",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-typing-inspection"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-typing-extensions",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-winrt-runtime"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-winrt-runtime",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-winrt-windows-devices-bluetooth"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-winrt-runtime",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-winrt-windows-devices-bluetooth-advertisement"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-winrt-runtime",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-winrt-windows-devices-bluetooth-genericattributeprofile"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-winrt-runtime",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-winrt-windows-devices-enumeration"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-winrt-runtime",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-winrt-windows-foundation"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-winrt-runtime",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-winrt-windows-foundation-collections"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-winrt-runtime",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-winrt-windows-storage-streams"
+    }
+  ],
+  "spdxVersion": "SPDX-2.3"
+}

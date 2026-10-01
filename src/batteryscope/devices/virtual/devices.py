@@ -2,25 +2,31 @@
 
 from __future__ import annotations
 
-from datetime import datetime, timezone
+from collections.abc import Callable, Iterable
+from datetime import UTC, datetime
 from enum import StrEnum
 from time import monotonic_ns
-from typing import Callable, Iterable
 
 from batteryscope.core.models import (
-    DeviceCapabilities, DeviceIdentity, MeasurementSample, QualityFlag,
-    SourceKind, SupportStatus, VerifiedValue, VerificationStatus, LimitSourceKind,
+    DeviceCapabilities,
+    DeviceIdentity,
+    LimitSourceKind,
+    MeasurementSample,
+    QualityFlag,
+    SourceKind,
+    SupportStatus,
+    VerificationStatus,
+    VerifiedValue,
 )
-from batteryscope.safety.stop import StopPhase, StopResult
 from batteryscope.devices.virtual.battery import VirtualBattery
 from batteryscope.devices.virtual.scenarios import SCENARIOS
-
+from batteryscope.safety.stop import StopPhase, StopResult
 
 Clock = Callable[[], tuple[int, datetime]]
 
 
 def host_clock() -> tuple[int, datetime]:
-    return monotonic_ns(), datetime.now(timezone.utc)
+    return monotonic_ns(), datetime.now(UTC)
 
 
 def simulated_limit(value: float, unit: str) -> VerifiedValue:

@@ -106,7 +106,7 @@ class AcquisitionEngine:
                 if batch:
                     self.writer.write(device_id, batch)
                     self.bus.publish(Event("RawChunkWritten", device_id, {"rows": len(batch)}))
-        except BaseException as error:
+        except BaseException as error:  # noqa: BLE001 - propagate worker failure to producer/close
             self.writer_error = error
 
     def close(self) -> None:

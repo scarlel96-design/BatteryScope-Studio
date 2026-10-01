@@ -1,0 +1,15 @@
+COMMAND: uv run --locked python tools/benchmark_pipeline.py --samples-per-device 1000 --runtime-dir runtime/wo01-benchmark
+INPUT: C:\Users\scarl\Documents\Codex\2026-10-01\batteryscope-studio-sol-work-order-01
+2026-10-02 02:51:12 [info     ] session.stopped                rows=2000 session_id=bb1bf05923124e2e8ceef917463b1b7e state=ABORTED
+{
+  "chunk_write_bytes_per_second": 230164.6074080616,
+  "duckdb_query_ms": 47.5642000001244,
+  "emergency_stop_phase": "VERIFIED_OFF",
+  "ingestion_samples_per_second": 5480.810995602013,
+  "queue_max_depth": 581,
+  "raw_chunks": 2,
+  "rows": 2000,
+  "session_id": "bb1bf05923124e2e8ceef917463b1b7e",
+  "status": "ABORTED"
+}
+EXIT STATUS: 0

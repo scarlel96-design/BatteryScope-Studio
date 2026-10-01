@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 
-import ast
 import argparse
+import ast
 import json
 import re
 import subprocess
@@ -11,13 +11,12 @@ import sys
 import tomllib
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "src" / "batteryscope"
 REQUIRED_DOCS = (
     "README.md", "docs/ARCHITECTURE.md", "docs/HARDWARE_STATUS.md", "docs/OSS_BOM.md",
     "docs/protocols/c2-pro.md", "docs/protocols/ebd-a20h.md", "schemas/plugin-manifest.schema.json",
-    "docs/qt-modules.json",
+    "docs/qt-modules.json", "docs/lock_license_evidence.json", "SBOM.spdx.json",
 )
 REQUIRED_ADRS = tuple(f"docs/adr/ADR-{number:03d}-" for number in range(1, 6))
 PHYSICAL_METHODS = {
@@ -68,7 +67,7 @@ def main(static_only: bool = False) -> int:
     schema_path = ROOT / "schemas" / "plugin-manifest.schema.json"
     if schema_path.exists():
         schema = json.loads(schema_path.read_text(encoding="utf-8"))
-        if not set(("plugin_id", "capabilities", "supported_devices")).issubset(schema.get("required", [])):
+        if not {"plugin_id", "capabilities", "supported_devices"}.issubset(schema.get("required", [])):
             violations.append("plugin manifest schema lacks required fields")
     pyproject = tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))
     if pyproject["project"]["requires-python"] != ">=3.12,<3.13":
@@ -95,11 +94,20 @@ def main(static_only: bool = False) -> int:
                                bom, flags=re.MULTILINE | re.IGNORECASE):
                 violations.append(f"BOM version does not match lock: {name}")
         sbom_path = ROOT / "SBOM.spdx.json"
-        if sbom_path.exists():
+        evidence_path = ROOT / "docs" / "lock_license_evidence.json"
+        if sbom_path.exists() and evidence_path.exists():
             sbom = json.loads(sbom_path.read_text(encoding="utf-8"))
+            evidence = json.loads(evidence_path.read_text(encoding="utf-8"))
             spdx = {name_of(package["name"]): package["versionInfo"] for package in sbom.get("packages", [])}
-            if locked != spdx:
-                violations.append("SBOM package names/versions differ from uv.lock")
+            reviewed = {name_of(name): item["version"] for name, item in evidence.items()}
+            if locked != spdx or locked != reviewed:
+                violations.append("SBOM/license evidence package names or versions differ from uv.lock")
+            for package in sbom.get("packages", []):
+                name = name_of(package["name"])
+                if name != "batteryscope-studio" and package.get("licenseConcluded") in (None, "UNKNOWN", "NOASSERTION"):
+                    violations.append(f"manual license review required: {name}")
+                if name in evidence and package.get("licenseConcluded") != evidence[name]["license_concluded"]:
+                    violations.append(f"SBOM license differs from reviewed evidence: {name}")
     result = subprocess.run(["git", "check-ignore", "--quiet", "runtime/fixture.raw"], cwd=ROOT, check=False)
     if result.returncode != 0:
         violations.append("runtime/ is not ignored by Git")

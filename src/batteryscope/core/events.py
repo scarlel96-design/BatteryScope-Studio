@@ -1,9 +1,10 @@
 """Small synchronous event bus; handlers execute in the publisher's thread."""
 
 from collections import defaultdict
+from collections.abc import Callable
 from dataclasses import dataclass, field
-from datetime import datetime, timezone
-from typing import Any, Callable
+from datetime import UTC, datetime
+from typing import Any
 
 
 @dataclass(frozen=True)
@@ -11,7 +12,7 @@ class Event:
     name: str
     device_id: str | None = None
     details: dict[str, Any] = field(default_factory=dict)
-    timestamp_utc: datetime = field(default_factory=lambda: datetime.now(timezone.utc))
+    timestamp_utc: datetime = field(default_factory=lambda: datetime.now(UTC))
 
 
 EventHandler = Callable[[Event], None]

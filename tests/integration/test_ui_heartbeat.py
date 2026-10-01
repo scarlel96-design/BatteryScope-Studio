@@ -1,6 +1,7 @@
 """The QML event loop remains responsive while the worker writes and queries."""
 
 from concurrent.futures import ThreadPoolExecutor
+from itertools import pairwise
 from time import monotonic, sleep
 
 from PySide6.QtCore import QCoreApplication, QTimer
@@ -27,4 +28,4 @@ def test_ui_heartbeat_during_demo(tmp_path) -> None:
     timer.stop()
     assert result["rows"] == 160
     assert len(ticks) >= 2
-    assert max(b - a for a, b in zip(ticks, ticks[1:])) < 0.25
+    assert max(b - a for a, b in pairwise(ticks)) < 0.25

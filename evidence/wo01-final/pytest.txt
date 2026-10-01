@@ -1,0 +1,5 @@
+COMMAND: uv run --locked pytest -q
+INPUT: C:\Users\scarl\Documents\Codex\2026-10-01\batteryscope-studio-sol-work-order-01
+.......................................                                  [100%]
+39 passed in 3.27s
+EXIT STATUS: 0

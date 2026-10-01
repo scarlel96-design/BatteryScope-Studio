@@ -1,0 +1,5 @@
+COMMAND: uv run --locked pytest -q tests/integration/test_recovery.py tests/replay/test_replay.py
+INPUT: C:\Users\scarl\Documents\Codex\2026-10-01\batteryscope-studio-sol-work-order-01
+.........                                                                [100%]
+9 passed in 1.66s
+EXIT STATUS: 0

@@ -32,7 +32,7 @@ class DeviceManager:
             try:
                 device.disconnect()
                 self.bus.publish(Event("DeviceDisconnected", device_id))
-            except Exception as error:
+            except Exception as error:  # noqa: BLE001 - disconnect remaining devices
                 first_error = first_error or error
         if first_error is not None:
             raise first_error

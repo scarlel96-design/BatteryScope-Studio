@@ -7,7 +7,6 @@ from collections.abc import Callable
 from batteryscope.core.models import PluginManifest
 from batteryscope.devices.virtual.devices import VirtualC2, VirtualEBD
 
-
 DeviceFactory = Callable[[], object]
 
 

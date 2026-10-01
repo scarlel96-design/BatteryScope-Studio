@@ -4,7 +4,12 @@ from __future__ import annotations
 
 from serial.tools import list_ports
 
-from batteryscope.core.models import DeviceCapabilities, DeviceIdentity, SourceKind, SupportStatus
+from batteryscope.core.models import (
+    DeviceCapabilities,
+    DeviceIdentity,
+    SourceKind,
+    SupportStatus,
+)
 from batteryscope.devices.base.contracts import NotVerifiedProtocolError
 
 

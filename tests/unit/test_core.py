@@ -1,12 +1,16 @@
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 import pytest
 from pydantic import ValidationError
 
 from batteryscope.core.events import EventBus
 from batteryscope.core.models import (
-    DeviceCapabilities, MeasurementSample, QualityFlag, SourceKind,
-    VerificationStatus, VerifiedValue,
+    DeviceCapabilities,
+    MeasurementSample,
+    QualityFlag,
+    SourceKind,
+    VerificationStatus,
+    VerifiedValue,
 )
 from batteryscope.devices.virtual.devices import LoadState, VirtualEBD
 from batteryscope.safety.engine import LoadRequest, SafetyDenied, SafetyEngine
@@ -43,9 +47,9 @@ def test_emergency_stop_turns_virtual_load_off_and_safe() -> None:
 
 
 def test_sample_rejects_nonfinite_and_missing_provenance() -> None:
-    common = dict(timestamp_monotonic_ns=1, timestamp_utc=datetime.now(timezone.utc),
-                  sequence=1, source_device_id="virtual:test", source_kind=SourceKind.SIMULATED,
-                  voltage_v=5, current_a=1, power_w=5)
+    common = {"timestamp_monotonic_ns": 1, "timestamp_utc": datetime.now(UTC),
+              "sequence": 1, "source_device_id": "virtual:test", "source_kind": SourceKind.SIMULATED,
+              "voltage_v": 5, "current_a": 1, "power_w": 5}
     with pytest.raises(ValidationError):
         MeasurementSample(**common, quality_flags={QualityFlag.VALID})
     with pytest.raises(ValidationError):
