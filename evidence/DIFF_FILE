@@ -1,0 +1,41 @@
+diff --git a/evidence/BASELINE_FILE b/evidence/MODIFIED_FILE
+index 8b05e2d..61ea0a7 100644
+--- a/evidence/BASELINE_FILE
++++ b/evidence/MODIFIED_FILE
+@@ -3 +3 @@
+-Work Order 01 foundation for a local-first battery and USB power diagnostic platform.
++BatteryScope Studio is a local-first foundation for PC-based USB power and battery diagnostics. Work Order 01 validates the data path with simulated instruments. It does not run physical load tests or infer battery SOH.
+@@ -5 +5,32 @@ Work Order 01 foundation for a local-first battery and USB power diagnostic plat
+-Implementation, validation results, and hardware status are documented in later Work Order commits.
++## Current implementation
++
++The CLI initializes a capability-based device registry, discovers and connects Virtual C2 and Virtual EBD, captures canonical samples, writes SQLite metadata and ZSTD Parquet chunks, triggers an emergency stop, and queries saved rows with DuckDB. The emergency demo ends in `ABORTED`; a process interruption is `INCOMPLETE`. The Qt Quick/QML window is a minimal shell.
++
++| Device | Discovery | Telemetry | Control |
++| --- | --- | --- | --- |
++| Virtual C2 | Implemented | Simulated | N/A |
++| Virtual EBD | Implemented | Simulated | Simulated CC/CP and verified-off stop |
++| ALIENTEK C2 Pro | Generic USB candidate inventory only | UNVERIFIED | BLOCKED / NOT VERIFIED |
++| ZKETECH EBD-A20H | Generic COM candidate inventory only | UNVERIFIED | BLOCKED / NOT VERIFIED |
++
++Physical VID/PID, frames, limits, and write methods are unknown. The physical drivers raise `NotVerifiedProtocolError` on control attempts. Simulated limits have fixture provenance and cannot authorize physical load control.
++
++## Development and execution
++
++Use Python 3.12. The project declares `>=3.12,<3.13`. Install [uv](https://docs.astral.sh/uv/), then run:
++
++```powershell
++uv sync --group dev
++uv run pytest
++uv run python tools/verify_architecture.py
++uv run batteryscope --headless-demo --runtime-dir runtime
++uv run batteryscope
++```
++
++`uv sync --group device-extra` adds optional USB HID/BLE discovery dependencies. Generated sessions in `runtime/` are ignored by Git. `--headless-demo` prints the session ID, row/chunk/event counts, final state, stop phase, query result, and baseline timing metrics.
++
++## Safety and limitations
++
++Do not attach a physical battery/load expecting this release to control it. There is no verified C2 Pro or EBD-A20H protocol, no verified physical equipment limits, and no hardware crash interlock. A software emergency-stop result is only `VERIFIED_OFF` for the virtual load. Search, SOH, lifetime prediction, PD control, analysis, reports, and final UI design are later work.
++
++The repository keeps UI → application → core contracts → device adapters separate. Raw data uses canonical host monotonic and UTC receipt timestamps. Session directories contain `manifest.json`, product/device/profile snapshots, `raw/*.parquet`, `events/events.jsonl`, and `analysis/`. See [architecture](docs/ARCHITECTURE.md), [hardware status](docs/HARDWARE_STATUS.md), [OSS BOM](docs/OSS_BOM.md), and [ADRs](docs/adr/).

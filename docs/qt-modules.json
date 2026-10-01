@@ -1,0 +1,5 @@
+{
+  "intended_modules": ["QtCore", "QtGui", "QtQml", "QtQuick", "QtQuickControls2", "QtWidgets"],
+  "prohibited_modules": ["QtGraphs", "QtCharts"],
+  "verification": "source-import-audit; packaged binary audit pending"
+}

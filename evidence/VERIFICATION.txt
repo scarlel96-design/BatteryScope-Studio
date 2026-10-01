@@ -1,0 +1,47 @@
+BatteryScope Studio Work Order 01 verification record
+Branch: codex/work-order-01
+Changed branch/field: README.md / "## Current implementation"
+Original SHA-256: 3A6DC59EF395CC8E6A11312C650C63314DB868134E946EFD6C7F577F5028AC4C
+
+Four artifact paths:
+MODIFIED_FILE: C:\Users\scarl\Documents\Codex\2026-10-01\batteryscope-studio-sol-work-order-01\evidence\MODIFIED_FILE
+DIFF_FILE: C:\Users\scarl\Documents\Codex\2026-10-01\batteryscope-studio-sol-work-order-01\evidence\DIFF_FILE
+VERIFICATION.txt: C:\Users\scarl\Documents\Codex\2026-10-01\batteryscope-studio-sol-work-order-01\evidence\VERIFICATION.txt
+ROLLBACK.sh: C:\Users\scarl\Documents\Codex\2026-10-01\batteryscope-studio-sol-work-order-01\evidence\ROLLBACK.sh
+
+BASELINE
+Command: py -3.12 -c "from pathlib import Path; import sys; print('IMPLEMENTED' if '## Current implementation' in Path(sys.argv[1]).read_text(encoding='utf-8') else 'BOOTSTRAP')" evidence/BASELINE_FILE
+Input: evidence/BASELINE_FILE (bootstrap README copy)
+Literal output: BOOTSTRAP
+Exit status: 0
+
+MODIFIED
+Command: py -3.12 -c "from pathlib import Path; import sys; print('IMPLEMENTED' if '## Current implementation' in Path(sys.argv[1]).read_text(encoding='utf-8') else 'BOOTSTRAP')" evidence/MODIFIED_FILE
+Input: evidence/MODIFIED_FILE (changed README copy)
+Literal output: IMPLEMENTED
+Exit status: 0
+
+ROLLBACK
+Preparation: Copy-Item evidence/MODIFIED_FILE runtime/ROLLBACK_TEST -Force
+Command: & 'C:\Program Files\Git\bin\bash.exe' evidence/ROLLBACK.sh runtime/ROLLBACK_TEST
+Input: runtime/ROLLBACK_TEST (copy of MODIFIED_FILE)
+Literal output: restored baseline to runtime/ROLLBACK_TEST
+Exit status: 0 (escalated Windows execution; ordinary Git Bash invocation hit Win32 signal-pipe error 5)
+Verification command: py -3.12 -c "from pathlib import Path; import hashlib; b=Path('evidence/BASELINE_FILE').read_bytes(); r=Path('runtime/ROLLBACK_TEST').read_bytes(); m=Path('evidence/MODIFIED_FILE').read_text(encoding='utf-8'); print('ROLLBACK_BEHAVIOR', 'BOOTSTRAP' if b==r else 'MISMATCH'); print('RESTORED_SHA256', hashlib.sha256(r).hexdigest().upper()); print('MODIFIED_REMAINS', 'IMPLEMENTED' if '## Current implementation' in m else 'BOOTSTRAP')"
+Literal output:
+ROLLBACK_BEHAVIOR BOOTSTRAP
+RESTORED_SHA256 3A6DC59EF395CC8E6A11312C650C63314DB868134E946EFD6C7F577F5028AC4C
+MODIFIED_REMAINS IMPLEMENTED
+Exit status: 0
+Restored behavior/status: isolated rollback target returned to bootstrap content; MODIFIED_FILE remains changed.
+
+Available validation:
+py -3.12 tools/verify_architecture.py --static-only -> architecture boundary PASS; exit 0
+py -3.12 tools/verify_qml_shell.py -> QML shell PASS: roots=1, heartbeat_ticks=12; exit 0
+PYTHONPATH=C:\Users\scarl\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\site-packages;src
+py -3.12 tools/offline_core_smoke.py -> offline core smoke PASS: unknown limit, physical guard, stop priority/idempotency, simulation, recovery; exit 0
+
+Strict verification:
+py -3.12 tools/verify_architecture.py -> uv.lock absent: reproducibility gate failed; exit 1
+py -3.12 -m pytest -q -> No module named pytest; exit 1
+PyPI installation attempt was unavailable on this host; therefore uv.lock, full automated suite, and Arrow/Parquet/DuckDB demo are UNVERIFIED. Work Order 01 completion: PARTIAL.

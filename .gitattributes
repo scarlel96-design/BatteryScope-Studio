@@ -1,3 +1,7 @@
 * text=auto
 *.parquet binary
 *.sqlite3 binary
+*.sh text eol=lf
+evidence/BASELINE_FILE -text
+evidence/MODIFIED_FILE -text
+evidence/DIFF_FILE -text
